@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: uludagwebsvc
+  namespace: uludag-enerji
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  selector:
+    app: uludagweb
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: uludagweb
+  namespace: uludag-enerji
+spec:
+  tls:
+    - hosts:
+        - "*.uludagenerji.net"
+      secretName: uludagenerji.net
+  rules:
+    - host: www.uludagenerji.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: uludagwebsvc
+                port:
+                  number: 80
+  ingressClassName: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uludagwebapp
+  namespace: uludag-enerji
+  labels:
+    app: uludagweb
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: uludagweb
+  template:
+    metadata:
+      labels:
+        app: uludagweb
+    spec:
+      containers:
+        - name: uludagwebapp
+          image: <IMAGE>
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: gh-regcred

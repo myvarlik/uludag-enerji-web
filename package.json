@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "pm2": "pm2 start processes.json --no-daemon",
     "dev": "cross-env NODE_ENV=development node server",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
@@ -16,6 +17,7 @@
     "compression": "^1.7.4",
     "html-to-text": "^8.1.0",
     "moment": "^2.29.1",
+    "pm2": "^5.2.0",
     "querystringify": "^2.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
