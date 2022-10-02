@@ -25,5 +25,5 @@ COPY --from=builder /app/package.json ./
 COPY --from=builder /app/processes.json ./
 COPY --from=builder /app/server.js ./server.js
 
-EXPOSE 80
+EXPOSE 3000
 CMD ["yarn", "pm2"]

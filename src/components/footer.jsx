@@ -44,7 +44,7 @@ export default function headers() {
                             </div>
                         </div>
                         <div className="inright">
-                            <p>Mail <a href="mailto:bilgi@uludagenerji.net">bilgi@uludagenerji.net</a></p>
+                            <p>Mail <a href="mailto:bilgi@uludagenerji.com">bilgi@uludagenerji.com</a></p>
                             <p>Telefon <span>0216 290 20 62</span></p>
                             <p className="mbn">
                                 Çalışma Saatlerimiz <span>09:00 - 18:00 Pzt - Cuma</span>

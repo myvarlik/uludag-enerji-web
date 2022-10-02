@@ -15,7 +15,7 @@ export default function offerAdd() {
                     pay ölçer sistemi, tasarrufa teşvik eder.
                 </p>
                 <a style={{ cursor: "pointer" }} onClick={() => {
-                    window.open('mailto:bilgi@uludagenerji.net?subject=Fiyat Teklif İstiyorum');
+                    window.open('mailto:bilgi@uludagenerji.com?subject=Fiyat Teklif İstiyorum');
                 }}><i className="far fa-paper-plane"></i> TEKLİF ALIN</a>
             </div>
         </div >
