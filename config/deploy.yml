@@ -17,6 +17,8 @@ kind: Ingress
 metadata:
   name: uludagweb
   namespace: uludag-enerji
+  annotations:
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
 spec:
   tls:
     - hosts:
