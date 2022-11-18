@@ -1,6 +1,5 @@
 FROM node:16.0.0-slim as base
 WORKDIR /app
-
 # dev image contains everything needed for testing, development and building
 FROM base AS development
 COPY ./package*.json ./yarn*.lock ./
