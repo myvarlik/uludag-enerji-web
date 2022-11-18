@@ -1,4 +1,4 @@
-FROM node:16 as base
+FROM node:16.0.0-slim as base
 WORKDIR /app
 
 # dev image contains everything needed for testing, development and building
