@@ -50,5 +50,7 @@ jobs:
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 uludag-hub
       - name: Deploy to DigitalOcean Kubernetes
         run: kubectl apply -f $GITHUB_WORKSPACE/config/deploy.yml
+      - name: RollOut Restart Deployment
+        run: kubectl rollout restart deployment uludagapiapp -n uludag-enerji
       - name: Verify deployment
         run: kubectl rollout status deployment/uludagwebapp -n uludag-enerji
