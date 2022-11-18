@@ -22,7 +22,7 @@ export default function headers() {
             <ul className="mainNav subLine">
                 <li><Link className={location.pathname === route.home ? 'active' : ''} to={route.home}>ANASAYFA</Link></li>
                 <li><Link className={location.pathname === route.productCategory ? 'active' : ''} to={route.productCategory}>ÜRÜN VE HİZMETLER</Link></li>
-                <li><a target={"_blank"} href="https://satis.uludagenerji.net/">SATIŞ</a></li>
+                {/* <li><a target={"_blank"} href="https://satis.uludagenerji.net/">SATIŞ</a></li> */}
                 <li><Link className={location.pathname === route.blogList ? 'active' : ''} to={route.blogList}>HABERLER</Link></li>
                 <li><Link className={location.pathname === route.contact ? 'active' : ''} to={route.contact}>İLETİŞİM</Link></li>
                 <li><Link className={location.pathname === route.about ? 'active' : ''} to={route.about}>HAKKIMIZDA</Link></li>

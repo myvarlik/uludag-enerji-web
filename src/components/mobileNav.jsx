@@ -19,7 +19,7 @@ export default function mobileNav() {
                 <ul>
                     <li><a className={location.pathname === route.home ? 'active' : ''} onClick={() => { handleClick(route.home) }}>ANASAYFA</a></li>
                     <li><a className={location.pathname === route.productCategory ? 'active' : ''} onClick={() => { handleClick(route.productCategory) }}>ÜRÜN VE HİZMETLER</a></li>
-                    <li><a target={"_blank"} href="https://satis.uludagenerji.net/">SATIŞ</a></li>
+                    {/* <li><a target={"_blank"} href="https://satis.uludagenerji.net/">SATIŞ</a></li> */}
                     <li><a className={location.pathname === route.blogList ? 'active' : ''} onClick={() => { handleClick(route.blogList) }}>HABERLER</a></li>
                     <li><a className={location.pathname === route.contact ? 'active' : ''} onClick={() => { handleClick(route.contact) }}>İLETİŞİM</a></li>
                     <li><a className={location.pathname === route.about ? 'active' : ''} onClick={() => { handleClick(route.about) }}>HAKKIMIZDA</a></li>
