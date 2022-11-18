@@ -26,7 +26,7 @@ export default function BlogList(props) {
                 <div key={'blog' + item.id} className="blogItem">
                     <div className="blogImage">
                         <Link to={route.blogDetail(item.slug)}>
-                            <img src={"https://image.uludagenerji.net" + item.thumb} alt={item.baslik} />
+                            <img src={"https://file.uludagenerji.net" + item.thumb} alt={item.baslik} />
                         </Link>
                     </div>
                     <div className="blogCont">

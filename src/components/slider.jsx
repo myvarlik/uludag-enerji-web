@@ -34,7 +34,7 @@ export default function slider({ sliders }) {
                             dataTitle={item.baslik}
                             dataLink={item.url}
                         >
-                            <img src={"https://image.uludagenerji.net" + item.resim} alt={item.baslik} />
+                            <img src={"https://file.uludagenerji.net" + item.resim} alt={item.baslik} />
                         </div>
                     )
                 } else {
@@ -44,7 +44,7 @@ export default function slider({ sliders }) {
                             className="item"
                             dataTitle={item.baslik}
                         >
-                            <img src={"https://image.uludagenerji.net" + item.resim} alt={item.baslik} />
+                            <img src={"https://file.uludagenerji.net" + item.resim} alt={item.baslik} />
                         </div>
                     )
                 }

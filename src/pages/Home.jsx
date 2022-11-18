@@ -21,7 +21,7 @@ export default function Home(props) {
     for (const item of home?.randomUrunTop3) {
       res.push(
         <Link key={item.id} className="prodLisItem" to={route.productDetail(item.slug)}>
-          <img src={"https://image.uludagenerji.net" + item.thumb} alt={item.baslik} />
+          <img height={250} src={"https://file.uludagenerji.net" + item.thumb} alt={item.baslik} />
           <span className="prodSpan">
             <span className="prodTitle">
               {item.baslik}

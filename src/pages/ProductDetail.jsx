@@ -20,7 +20,7 @@ export default function ProductDetail(props) {
   function download(file) {
     let fileEx = file.split("/");
     axios({
-      url: "https://image.uludagenerji.net" + file,
+      url: "https://file.uludagenerji.net" + file,
       method: 'GET',
       responseType: 'blob'
     })
@@ -41,7 +41,7 @@ export default function ProductDetail(props) {
     for (const item of productDetail?.randomUrunTop3) {
       res.push(
         <Link key={item.id} className="prodLisItem" to={route.productDetail(item.slug)}>
-          <img src={"https://image.uludagenerji.net" + item.thumb} alt={item.baslik} />
+          <img src={"https://file.uludagenerji.net" + item.thumb} alt={item.baslik} />
           <span className="prodSpan">
             <span className="prodTitle">
               {item.baslik}
@@ -83,7 +83,7 @@ export default function ProductDetail(props) {
           </div>
           <div className="spMiddle">
             <a href="#">
-              <img src={"https://image.uludagenerji.net" + productDetail?.urunDetay.resim} alt={productDetail?.urunDetay.baslik} />
+              <img src={"https://file.uludagenerji.net" + productDetail?.urunDetay.resim} alt={productDetail?.urunDetay.baslik} />
             </a>
           </div>
           <div className="spRight">

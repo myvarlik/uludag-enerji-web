@@ -37,7 +37,7 @@ function BlogDetail(props) {
                     <div className="blogContent">
                         <div className="blogItemFull">
                             <div className="blogImagefull">
-                                <img src={"https://image.uludagenerji.net" + blogdetail?.detayData?.resim} alt={blogdetail?.detayData?.baslik} />
+                                <img src={"https://file.uludagenerji.net" + blogdetail?.detayData?.resim} alt={blogdetail?.detayData?.baslik} />
                             </div>
                             <div className="blogCont bdetay">
                                 <div className="meta">
