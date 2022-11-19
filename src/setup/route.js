@@ -5,7 +5,7 @@ export const route = {
     contact: '/iletisim',
     questions: '/sorular',
     blogList: '/blog-liste',
-    blogListC: slug => '/blog-liste/' + slug,
+    blogListCategory: (slug, page) => '/blog-liste/' + slug + "/" + page,
     blogDetail: slug => '/blog-detay/' + slug,
     productCategory: '/urunler',
     productList: slug => '/urun-liste/' + slug,

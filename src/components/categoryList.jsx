@@ -8,7 +8,7 @@ export default function categoryList({ categorys }) {
         if (categorys)
             for (const item of categorys) {
                 res.push(
-                    <li key={item.id}><Link to={route.blogListC(item.slug)}>{item.adi}</Link></li>
+                    <li key={item.id}><Link to={route.blogListCategory(item.slug, 1)}>{item.adi}</Link></li>
                 )
             }
 

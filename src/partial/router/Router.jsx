@@ -1,7 +1,7 @@
-import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import { routeMap } from "../../setup/routeMap";
 
+import React from 'react';
+import { routeMap } from "../../setup/routeMap";
 
 function Router() {
     return (

@@ -7,21 +7,22 @@ import ReactGA from 'react-ga4';
 import SubHeader from '../components/subheader'
 import { htmlToText } from 'html-to-text';
 import moment from 'moment';
+import paging from '../setup/utility/paging';
 import { route } from '../setup/route'
 
-export default function BlogList(props) {
-    const { blogList } = props;
+export default function BlogListCategory(props) {
+    const { blogListCategory } = props;
 
-    if (!blogList) {
+    if (!blogListCategory) {
         return <Loading />;
     }
 
     ReactGA.initialize('G-6JJZSC5FD7');
-    ReactGA.send({ hitType: 'pageview', page: route.blogList });
+    ReactGA.send({ hitType: 'pageview', page: route.blogListCategory(blogListCategory.kategoriOwn?.slug, blogListCategory.page) });
 
     function getBlog() {
         let res = [];
-        for (const item of blogList.blogListe) {
+        for (const item of blogListCategory.blogListe) {
             res.push(
                 <div key={'blog' + item.id} className="blogItem">
                     <div className="blogImage">
@@ -42,6 +43,10 @@ export default function BlogList(props) {
             );
         }
 
+        if (res.length === 0) {
+            res.push(<h1>Bu Kategoride Henüz Makale Yok</h1>);
+        }
+
         return res;
     }
 
@@ -49,7 +54,7 @@ export default function BlogList(props) {
         <>
             <Helmet title={"Uludağ Enerji Haberler"} >
                 <meta name='description' content={"Uludağ Enerji Haberler"} />
-                <link rel='canonical' href={route.canonical(route.blogList)} />
+                <link rel='canonical' href={route.canonical(route.blogListCategory(blogListCategory.kategoriOwn.slug, blogListCategory.page))} />
             </Helmet>
 
             <SubHeader title="Blog Liste" backgroundImage="/images/hakkimizda.png" breadcrumbList={[{ key: 1, title: 'Blog Liste', route: route.blogList, className: 'nowhere' }]} />
@@ -57,8 +62,9 @@ export default function BlogList(props) {
             <div className="container">
                 <div className="blogWrap">
                     <div className="sideBar">
-                        <CategoryList categorys={blogList.kategori} />
-                        {/* <div className="widget white">
+                        <CategoryList categorys={blogListCategory.kategori} />
+                        {/* 
+                        <div className="widget white">
                             <h3>Ara</h3>
                             <input type="text" placeholder="..." />
                         </div> */}
@@ -73,6 +79,15 @@ export default function BlogList(props) {
                     </div>
                     <div className="blogContent">
                         {getBlog()}
+
+                        {blogListCategory.blogListe.length > 0 ?
+                            <div className="pagination">
+                                <ul>
+                                    {paging(blogListCategory.total, blogListCategory.page, blogListCategory.pageSize, blogListCategory.kategoriOwn.slug, route.blogListCategory)}
+                                </ul>
+                            </div> :
+                            <></>
+                        }
                     </div>
                 </div>
             </div>

@@ -4,6 +4,8 @@ export const defaultState = {
     home: null,
     questions: null,
     blogList: { kategori: [], blogListe: [], total: 0, success: false, current: 1, pageSize: 10 },
+    blogListCategory: null,
+    kategoriOwn: {},
     blogdetail: null,
     productList: null,
     productDetail: null,

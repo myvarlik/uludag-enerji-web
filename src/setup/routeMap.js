@@ -1,6 +1,7 @@
 import About from "../pages/About";
 import BlogDetail from "../pages/BlogDetail";
 import BlogList from "../pages/BlogList";
+import BlogListCategory from "../pages/BlogListCategory";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import ProductCategory from "../pages/ProductCategory";
@@ -16,6 +17,7 @@ const routeFetchArr = {
     "home": () => fetching({ url: api.home }),
     "questions": () => fetching({ url: api.questions }),
     "blogList": () => fetching({ url: api.blogList }),
+    "blogListCategory": ({ match }) => fetching({ url: api.blogListCategory(match.params.slug, match.params.page) }),
     "blogDetail": ({ match }) => fetching({ url: api.blogDetail(match.params.slug) }),
     "productCategory": () => fetching({ url: api.productCategory }),
     "productList": ({ match }) => fetching({ url: api.productList(match.params.slug) }),
@@ -31,6 +33,12 @@ export const routeMap = [
         stateName: "home"
     },
     {
+        component: fetcher(BlogListCategory, routeFetchArr.blogListCategory, "blogListCategory"),
+        fetch: routeFetchArr.blogListCategory,
+        stateName: "blogListCategory",
+        path: route.blogListCategory(":slug", ":page"),
+    },
+    {
         component: fetcher(BlogList, routeFetchArr.blogList, "blogList"),
         fetch: routeFetchArr.blogList,
         stateName: "blogList",
@@ -42,7 +50,6 @@ export const routeMap = [
         stateName: "blogdetail",
         path: route.blogDetail(':slug'),
     },
-
     {
         component: fetcher(ProductCategory, routeFetchArr.productCategory, "productCategory"),
         fetch: routeFetchArr.productCategory,
