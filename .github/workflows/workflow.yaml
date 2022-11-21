@@ -6,6 +6,7 @@ on:
     paths:
       - "config/**"
       - "src/**"
+      - "public/**"
       - "Dockerfile"
       - "index.html"
       - "server.js"
