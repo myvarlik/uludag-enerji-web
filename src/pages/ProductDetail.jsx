@@ -61,6 +61,9 @@ export default function ProductDetail(props) {
   return (
     <>
       <Helmet title={"Uludağ Enerji " + productDetail?.urunDetay.baslik} >
+        <meta property='og:title' content={productDetail?.urunDetay?.baslik} />
+        <meta property='og:description' content={productDetail?.urunDetay?.meta} />
+        <meta property='og:image' content={"https://file.uludagenerji.net" + productDetail?.urunDetay?.resim} />
         <meta name='description' content={htmlToText(productDetail?.urunDetay.meta)} />
         <link rel='canonical' href={route.canonical(route.productDetail(productDetail?.urunDetay.slug))} />
       </Helmet>

@@ -22,6 +22,9 @@ function BlogDetail(props) {
     return (
         <>
             <Helmet title={blogdetail?.detayData?.baslik} >
+                <meta property='og:title' content={blogdetail?.detayData?.baslik} />
+                <meta property='og:description' content={blogdetail?.detayData?.meta} />
+                <meta property='og:image' content={"https://file.uludagenerji.net" + blogdetail?.detayData?.resim} />
                 <meta name='description' content={blogdetail?.detayData?.meta} />
                 <link rel='canonical' href={route.canonical(route.blogDetail(blogdetail?.detayData?.slug))} />
             </Helmet>
