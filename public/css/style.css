@@ -251,6 +251,11 @@ h6 {
   width: 100%;
 }
 
+.mainSlider .item img {
+  width: 100%;
+  height: 550px;
+}
+
 .carousel-slider {
   height: 550px;
 }
@@ -998,7 +1003,7 @@ h3 a:hover {
 
 .subheader p a:after,
 .subheader p a:before {
-  content: " ";
+  content: "";
   height: 11px;
   width: 1px;
   background-color: var(--main-bg-color);
@@ -1241,6 +1246,10 @@ h3 a:hover {
   color: #464a56;
   letter-spacing: 0;
   line-height: 36px;
+}
+
+.tabItem img {
+  width: 100%;
 }
 
 .tabHead {
@@ -1839,6 +1848,10 @@ img.icno {
 }
 
 @media only screen and (max-width: 1170px) {
+  .subheader {
+    background: none;
+  }
+
   .mainNav li:first-child a {
     display: none;
   }
@@ -1954,6 +1967,15 @@ img.icno {
 }
 
 @media only screen and (max-width: 768px) {
+  .subheader {
+    background: none;
+  }
+
+  .subheader p a:after,
+  .subheader p a:before {
+    display: none !important;
+  }
+
   .mainNav {
     display: none;
   }

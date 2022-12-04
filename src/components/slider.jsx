@@ -93,7 +93,10 @@ export default function slider({ sliders }) {
                 showThumbs={false}
                 showStatus={false}
                 dynamicHeight={false}
+                infiniteLoop={true}
                 autoPlay={true}
+                transitionTime={1000}
+                interval={6000}
                 className="mainSlider"
                 onChange={(i, item) => {
                     const { dataLink, dataTitle } = item.props;

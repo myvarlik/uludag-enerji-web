@@ -79,11 +79,11 @@ export default function Home(props) {
             </div>
             <div className="witem wright">
               <h4>TANITIM <span>VİDEOMUZ</span></h4>
-              <a href="#">
-                <img src="/images/play.png" height="170" alt="" />
+              <a href="/">
+                <img src="/images/play.png" height="170" alt="Tanıtım Videomuz" />
               </a>
-              <a href="#">
-                <img className="mbn" src="/images/yt.png" height="30" alt="" />
+              <a href="/">
+                <img className="mbn" src="/images/yt.png" height="30" alt="youtube" />
               </a>
             </div>
           </div>
