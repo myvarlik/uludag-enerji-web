@@ -21,7 +21,7 @@ export default function ProductList(props) {
     for (const item of productList.urunListe) {
       res.push(
         <Link key={item.id} className="prodLisItem" to={route.productDetail(item.slug)}>
-          <img src={"https://file.uludagenerji.net" + item.thumb} alt={item.baslik} />
+          <img src={"https://file.uludagenerji.net" + item.thumb} height={500} width={500} alt={item.baslik} />
           <span className="prodSpan"> <span className="prodTitle">{item.baslik}</span>
             <span className="subspan">{htmlToText(item.icerik) + "..."}</span>
             <span className="spanright">

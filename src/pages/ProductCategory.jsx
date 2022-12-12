@@ -20,7 +20,7 @@ export default function ProductCategory(props) {
         for (const item of productCategory) {
             res.push(
                 <Link key={'urun-category' + item.id} className="prodLisItem" to={route.productList(item.slug)}>
-                    <img src={"https://file.uludagenerji.net" + item.resim} alt={item.adi} />
+                    <img src={"https://file.uludagenerji.net" + item.resim} width={500} height={500} alt={item.adi} />
                     <span className="prodSpan"> <span className="prodTitle">{item.adi}</span>
                         <span className="subspan">{item.aciklama}</span>
                         <span className="spanright">
