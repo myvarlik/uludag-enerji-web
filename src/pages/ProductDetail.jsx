@@ -60,7 +60,7 @@ export default function ProductDetail(props) {
 
   return (
     <>
-      <Helmet title={"Uludağ Enerji " + productDetail?.urunDetay.baslik} >
+      <Helmet title={productDetail?.urunDetay.baslik + " - Uludağ Enerji"} >
         <meta property='og:title' content={productDetail?.urunDetay?.baslik} />
         <meta property='og:description' content={productDetail?.urunDetay?.meta} />
         <meta property='og:image' content={"https://file.uludagenerji.net" + productDetail?.urunDetay?.resim} />
