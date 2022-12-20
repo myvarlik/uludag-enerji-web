@@ -5,7 +5,7 @@ export default function question(props) {
 
     return (
         <div className="itemfaq">
-            <a style={{ cursor: "pointer" }} onClick={() => setDisplay(!display)}>{props.soru}</a>
+            <a style={{ cursor: "pointer", color: "blue" }} onClick={() => setDisplay(!display)}>{props.soru}</a>
             <p style={{ display: display ? "block" : "none" }}>
                 {props.cevap}
             </p>

@@ -18,7 +18,7 @@ function BlogDetail(props) {
 
     ReactGA.initialize('G-6JJZSC5FD7');
     ReactGA.send({ hitType: 'pageview', page: route.blogDetail(blogdetail?.detayData?.slug) });
-
+    console.log(blogdetail?.detayData);
     return (
         <>
             <Helmet title={blogdetail?.detayData?.baslik} >
@@ -44,7 +44,7 @@ function BlogDetail(props) {
                             </div>
                             <div className="blogCont bdetay">
                                 <div className="meta">
-                                    <Link className="cat" to={"/" + blogdetail?.detayData?.kategorislug}>{blogdetail?.detayData?.kategori}</Link>
+                                    <Link className="cat" to={"/blog-liste/" + blogdetail?.detayData?.kategoriSlug}>{blogdetail?.detayData?.kategori}</Link>
                                     <span>{moment(blogdetail?.detayData?.yayinlanmaTarihi).format('DD-MM-YYYY')}</span>
                                 </div>
                                 <h2>{blogdetail?.detayData?.baslik}</h2>

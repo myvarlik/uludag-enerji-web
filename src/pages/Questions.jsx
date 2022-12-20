@@ -35,7 +35,6 @@ export default function Questions(props) {
                 <meta name='description' content={"Uludağ Enerji Sık Sorulan Sorular"} />
                 <link rel='canonical' href={route.canonical(route.questions)} />
             </Helmet>
-            <Helmet title='Uludağ Enerji Sık Sorulan Sorular' />
             <SubHeader title="Sık Sorulan Sorular" backgroundImage="" breadcrumbList={[{ key: 1, title: 'İletişim', route: route.blogList, classNameName: 'nowhere' }]} />
             <div className="container">
                 <p>

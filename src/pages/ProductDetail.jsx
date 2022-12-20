@@ -92,7 +92,7 @@ export default function ProductDetail(props) {
           <div className="spRight">
             <div className="spBox spLast">
               <div className="spIcon"><i className="far fa-paper-plane"></i></div>
-              <a target={"_blank"} href={productDetail?.urunDetay.satisLink}>BU ÜRÜNÜ SATIN ALIN</a>
+              <a target={"_blank"} href={route.contact}>BU ÜRÜNÜ SATIN ALINALMAK İÇİN İLETİŞİME GEÇİN</a>
             </div>
           </div>
           <div className="mobileX">
@@ -107,7 +107,7 @@ export default function ProductDetail(props) {
             <div className="spRight">
               <div className="spBox spLast">
                 <div className="spIcon"><i className="far fa-paper-plane"></i></div>
-                <a target={"_blank"} href={productDetail?.urunDetay.satisLink}>BU ÜRÜNÜ SATIN ALIN</a>
+                <a target={"_blank"} href={route.contact}>BU ÜRÜNÜ SATIN ALINALMAK İÇİN İLETİŞİME GEÇİN</a>
               </div>
             </div>
           </div>
