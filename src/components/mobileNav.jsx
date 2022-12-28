@@ -24,8 +24,8 @@ export default function mobileNav() {
                     <li><a className={location.pathname === route.contact ? 'active' : ''} onClick={() => { handleClick(route.contact) }}>İLETİŞİM</a></li>
                     <li><a className={location.pathname === route.about ? 'active' : ''} onClick={() => { handleClick(route.about) }}>HAKKIMIZDA</a></li>
 
-                    <li><a className="y1" href="https://panel.uludagenerji.com/" target={"_blank"}>Yönetici Girişi</a></li>
-                    <li><a className="y2" href="https://panel.uludagenerji.com/" target={"_blank"}>Daire Girişi</a></li>
+                    <li><a className="y1" href="https://panel.uludagenerji.com/" rel='nofollow' target={"_blank"}>Yönetici Girişi</a></li>
+                    <li><a className="y2" href="https://panel.uludagenerji.com/" rel='nofollow' target={"_blank"}>Daire Girişi</a></li>
                 </ul>
             </div>
             <div onClick={() => { setDisplay(!display) }} id="mobnav"><i className="fas fa-bars"></i></div>

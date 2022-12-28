@@ -31,8 +31,8 @@ export default function headers() {
                 <div className="contentline">
                     <span>Panel Girişi</span>
                     <div className="links">
-                        <a href="https://panel.uludagenerji.com/" target={"_blank"}>Yönetici</a>
-                        <a href="https://panel.uludagenerji.com/" target={"_blank"}>Daire</a>
+                        <a href="https://panel.uludagenerji.com/" rel='nofollow' target={"_blank"}>Yönetici</a>
+                        <a href="https://panel.uludagenerji.com/" rel='nofollow' target={"_blank"}>Daire</a>
                     </div>
                 </div>
             </div>

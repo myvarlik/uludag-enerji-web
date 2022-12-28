@@ -37,9 +37,9 @@ export default function headers() {
                                     ADRES: Atatürk Mahallesi Ertuğrulgazi Sk Metropol İstanbul İş Merkezi A Blok No:331 Ataşehir İstanbul
                                 </p>
                                 <div className="social">
-                                    <a href="https://www.facebook.com/uludagenerji1" target={"_blank"}><i title='Uludağ Enerji facebook' className="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.facebook.com/uludagenerji1" rel='nofollow' target={"_blank"}><i title='Uludağ Enerji facebook' className="fab fa-facebook-f"></i></a>
                                     {/* <a className="sactive" href="#"><i className="fab fa-twitter"></i></a> */}
-                                    <a href="https://www.instagram.com/uludag.enerji" target={"_blank"}><i title='Uludağ Enerji instagram' className="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/uludag.enerji" rel='nofollow' target={"_blank"}><i title='Uludağ Enerji instagram' className="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
