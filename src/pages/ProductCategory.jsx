@@ -37,7 +37,7 @@ export default function ProductCategory(props) {
     return (
         <>
             <Helmet title='Uludağ Enerji Ürünler ve Hizmetler'>
-                <meta name='description' content={""} />
+                <meta name='description' content={"Uludağ enerji ürün kategorilerimiz en son teknoloji ısı pay ölçer ve diğer ürünlerle hizmetinizdeyiz"} />
                 <link rel='canonical' href={route.canonical(route.productCategory)} />
             </Helmet>
             <SubHeader title="Ürünler ve Hizmetler" backgroundImage="/images/urunbg.png" breadcrumbList={[{ key: 1, title: 'Ürünler ve Hizmetler', route: route.productCategory, class: 'nowhere' }]} />

@@ -44,7 +44,7 @@ export default function BlogList(props) {
 
         return res;
     }
-
+console.log(blogList);
     return (
         <>
             <Helmet title={"Uludağ Enerji Haberler"} >
