@@ -2,11 +2,22 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react'
 import ReactGA from 'react-ga4';
 import SubHeader from '../components/subheader';
+import Swal from 'sweetalert2'
+import { api } from '../setup/api'
+import { fetching } from '../setup/utility/fetching';
 import { route } from '../setup/route'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 export default function Contact() {
     ReactGA.initialize('G-6JJZSC5FD7');
     ReactGA.send({ hitType: 'pageview', page: route.contact });
+
+    const [adi, setAdi] = React.useState("");
+    const [mail, setMail] = React.useState("");
+    const [aciklama, setAciklama] = React.useState("");
+    const [loading, setLoading] = React.useState(false);
 
     return (
         <>
@@ -30,13 +41,50 @@ export default function Contact() {
                     <div className="midLeft">
                         <h4>BİZE ULAŞIN</h4>
                         <div className="inWrap">
-                            <div><label>Adınız</label> <input type="text" /></div>
-                            <div><label>Mailiniz</label> <input type="text" /></div>
+                            <div>
+                                <label>Adınız</label>
+                                <input type="text" placeholder="Adınız" value={adi} onChange={(e) => setAdi(e.target.value)} />
+                            </div>
+                            <div>
+                                <label>Mailiniz</label>
+                                <input type="text" placeholder="mail@adresiniz.com" value={mail} onChange={(e) => setMail(e.target.value)} />
+                            </div>
                         </div>
                         <div className="textarea">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea cols="30" rows="10" onChange={(e) => setAciklama(e.target.value)}></textarea>
                         </div>
-                        <button className="send">GÖNDER</button>
+                        <button className="send" disabled={loading} onClick={async () => {
+                            setLoading(true);
+                            const postData = {
+                                adi,
+                                mail,
+                                aciklama
+                            }
+
+                            console.log(postData);
+
+                            try {
+                                await fetching({ data: postData, url: api.contactAdd, method: 'POST' });
+                                MySwal.fire({
+                                    title: "Uludağ Enerji",
+                                    text: "Bizimle iletişime geçtiğiniz için teşekkür ederiz!",
+                                    confirmButtonText: "Tamam",
+                                    confirmButtonColor: "#df5630"
+                                })
+                            } catch (error) {
+                                MySwal.fire({
+                                    title: "Bir Hata Oluştu Lütfen Tekrar Deneyiniz.",
+                                    footer: 'Uludağ Enerji İletişim',
+                                    confirmButtonText: "Tamam",
+                                    confirmButtonColor: "#df5630"
+                                })
+                            }
+
+                            setAdi("");
+                            setMail("");
+                            setAciklama("");
+                            setLoading(false);
+                        }}>GÖNDER</button>
                     </div>
                     <div className="midRight">
                         <div className="inright">

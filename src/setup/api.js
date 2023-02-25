@@ -9,6 +9,7 @@ let api = {
     productList: slug => '/urun-liste/' + slug,
     productDetail: slug => '/urun-detay/' + slug,
     mailAdd: '/mail-list',
+    contactAdd: '/contact-add',
 }
 
 export { api };

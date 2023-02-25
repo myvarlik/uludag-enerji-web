@@ -21,7 +21,7 @@ export default function oArea() {
                         <p>Tüm yeniliklerden <span>Haberdar olun</span></p>
                         <div className="inputWrapper">
                             <input type="text" placeholder="Adınız" value={adi} onChange={(e) => setAdi(e.target.value)} />
-                            <input type="text" placeholder="mai@adresiniz.com" value={mail} onChange={(e) => setMail(e.target.value)} />
+                            <input type="text" placeholder="mail@adresiniz.com" value={mail} onChange={(e) => setMail(e.target.value)} />
                             <button type="button" disabled={loading} onClick={async () => {
                                 setLoading(true);
                                 const postData = {
