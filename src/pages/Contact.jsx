@@ -89,7 +89,7 @@ export default function Contact() {
                     <div className="midRight">
                         <div className="inright">
                             <p>Mail <a href="mailto:bilgi@uludagenerji.com">bilgi@uludagenerji.com</a></p>
-                            <p>Telefon <span>0216 290 20 62</span></p>
+                            <p>Telefon <span><a href="tel:0216 290 20 62">0216 290 20 62</a></span></p>
                             <p className="mbn">
                                 Çalışma Saatlerimiz <span>09:00 - 18:00 Pzt - Cuma</span>
                             </p>
